@@ -5,8 +5,8 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'MCP Gearbox - Model Context Protocol Server Management',
+  tagline: 'Simplify Model Context Protocol server management across AI agents',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -15,15 +15,15 @@ const config: Config = {
   },
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
+  url: 'https://rohitsoni007.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/mcp-gearbox-docs/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'rohitsoni007', // Usually your GitHub org/user name.
+  projectName: 'mcp-gearbox', // Usually your repo name.
 
   onBrokenLinks: 'throw',
 
@@ -44,7 +44,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/rohitsoni007/mcp-gearbox/tree/main/',
         },
         blog: {
           showReadingTime: true,
@@ -55,7 +55,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/rohitsoni007/mcp-gearbox/tree/main/',
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
@@ -75,9 +75,9 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'My Site',
+      title: 'MCP Gearbox',
       logo: {
-        alt: 'My Site Logo',
+        alt: 'MCP Gearbox Logo',
         src: 'img/logo.svg',
       },
       items: [
@@ -85,11 +85,10 @@ const config: Config = {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
-          label: 'Tutorial',
+          label: 'Documentation',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://github.com/facebook/docusaurus',
+          href: 'https://github.com/rohitsoni007/mcp-gearbox',
           label: 'GitHub',
           position: 'right',
         },
@@ -102,8 +101,20 @@ const config: Config = {
           title: 'Docs',
           items: [
             {
-              label: 'Tutorial',
-              to: '/docs/intro',
+              label: 'Getting Started',
+              to: '/docs/getting-started',
+            },
+            {
+              label: 'MCP Gearbox CLI',
+              to: '/docs/packages/mcp-gearbox-cli',
+            },
+            {
+              label: 'MCP Gearbox Desktop',
+              to: '/docs/packages/mcp-gearbox',
+            },
+            {
+              label: 'MCP Gearbox JS',
+              to: '/docs/packages/mcp-gearbox-js',
             },
           ],
         },
@@ -111,16 +122,12 @@ const config: Config = {
           title: 'Community',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              label: 'GitHub Issues',
+              href: 'https://github.com/rohitsoni007/mcp-gearbox/issues',
             },
             {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'X',
-              href: 'https://x.com/docusaurus',
+              label: 'GitHub Discussions',
+              href: 'https://github.com/rohitsoni007/mcp-gearbox/discussions',
             },
           ],
         },
@@ -128,17 +135,13 @@ const config: Config = {
           title: 'More',
           items: [
             {
-              label: 'Blog',
-              to: '/blog',
-            },
-            {
               label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              href: 'https://github.com/rohitsoni007/mcp-gearbox',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} MCP Gearbox. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,

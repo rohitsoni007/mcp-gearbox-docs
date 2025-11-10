@@ -28,4 +28,4 @@ jobs:
           deploy_key: ${{ secrets.DEPLOY_KEY }}
           external_repository: rohitsoni007/mcp-gearbox
           publish_branch: gh-pages
-          publish_dir: ./docs
+          publish_dir: ./build

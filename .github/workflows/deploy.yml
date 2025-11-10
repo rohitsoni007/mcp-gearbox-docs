@@ -1,40 +1,31 @@
-name: Deploy Docs to mcp-gearbox gh-pages
+name: Deploy Docs
 
 on:
   push:
     branches:
-      - main  # or docs branch
-
-permissions:
-  contents: write
+      - main
 
 jobs:
   deploy:
-    name: Build & Deploy
     runs-on: ubuntu-latest
-
     steps:
-      - name: 🧾 Checkout source repo
+      - name: Checkout source
         uses: actions/checkout@v4
 
-      - name: ⚙️ Setup Node.js
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
 
-      - name: 📦 Install dependencies
-        run: npm ci
+      - name: Install and build docs
+        run: |
+          npm ci
+          npm run docs:build
 
-      - name: 🏗️ Build site
-        run: npm run build
-
-      - name: 🚀 Deploy to mcp-gearbox gh-pages
+      - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          deploy_key: ${{ secrets.DEPLOY_KEY }}
           external_repository: rohitsoni007/mcp-gearbox
           publish_branch: gh-pages
-          publish_dir: ./build   # or ./dist depending on your framework
-          force_orphan: true
-          full_commit_message: |
-            🚀 Auto-deploy docs to mcp-gearbox@gh-pages from ${{ github.repository }}@${{ github.sha }}
+          publish_dir: ./docs

@@ -1,0 +1,41 @@
+name: Deploy Docs to GitHub Pages (Cross Repo, Self-Healing)
+
+on:
+  push:
+    branches:
+      - main  # Change if your docs are in another branch
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    name: Build & Deploy
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🧾 Checkout source repo
+        uses: actions/checkout@v4
+
+      - name: ⚙️ Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: 📦 Install dependencies
+        run: npm ci
+
+      - name: 🏗️ Build documentation site
+        run: npm run build
+
+      - name: 🚀 Deploy to GitHub Pages (external repo, self-healing)
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          external_repository: rohitsoni007/rohitsoni007.github.io
+          deploy_key: ${{ secrets.DEPLOY_KEY }}
+          publish_branch: gh-pages
+          publish_dir: ./build  # Change to ./dist if using VitePress, etc.
+          force_orphan: true
+          commit_message: |
+            🚀 Auto-deploy from project-docs@${{ github.sha }}
+            (Created or updated gh-pages branch automatically)

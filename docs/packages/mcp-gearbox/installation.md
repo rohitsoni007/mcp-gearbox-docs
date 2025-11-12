@@ -8,8 +8,10 @@ sidebar_position: 2
 
 ## Prerequisites
 
-* Node.js 18 or higher
-* npm or yarn package manager
+* Python 3.11 or higher
+* uv package manager
+
+Note: For development, you may also need Node.js 18 or higher and npm for building the Electron frontend.
 
 ## Download
 

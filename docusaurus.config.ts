@@ -74,6 +74,15 @@ const config: Config = {
     colorMode: {
       respectPrefersColorScheme: true,
     },
+    headTags: [
+      {
+        tagName: 'meta',
+        attributes: {
+          name: 'google-site-verification',
+          content: 'QMpkN_eu_9Xli45PIGkSlaC_xucfSNF-Kp_3sTuRhqU',
+        },
+      },
+    ],
     navbar: {
       title: 'MCP Gearbox',
       logo: {

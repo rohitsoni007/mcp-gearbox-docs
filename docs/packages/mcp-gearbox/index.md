@@ -34,9 +34,34 @@ Managing MCP servers manually can be tedious and error-prone. MCP Gearbox elimin
 
 ## Supported AI Agents
 
-* Claude Desktop
-* Kiro
-* Other MCP-compatible agents
+MCP Gearbox Desktop supports a wide range of AI agents that are compatible with the Model Context Protocol (MCP). The application provides seamless integration with these agents, allowing you to easily configure and manage MCP servers for each one.
+
+| Agent | Support | Notes |
+| --- | --- | --- |
+| GitHub Copilot | ✅ | Full support for global and project-level configurations |
+| Continue | ✅ | Full support for global and project-level configurations |
+| Kiro | ✅ | Full support for global and project-level configurations |
+| Cursor | ✅ | Full support for global and project-level configurations |
+| Claude Code | ✅ | Full support for global and project-level configurations |
+| Claude Desktop | ✅ | Full support for global and project-level configurations |
+| Gemini CLI | ✅ | Full support for global and project-level configurations |
+| Qoder | ⚠️ | Does not support project-level MCP configuration |
+| Copilot CLI | ✅ | Does not support project-level MCP configuration |
+| LM Studio | ✅ | Does not need project-level MCP configuration |
+
+### Agent-Specific Features
+
+Each AI agent may have specific features or requirements when working with MCP servers:
+
+* **GitHub Copilot**: Integrates directly with the GitHub Copilot extension in your IDE
+* **Continue**: Works with the Continue extension for VS Code and other IDEs
+* **Kiro**: Supports Kiro's AI-powered coding assistance features
+* **Cursor**: Integrates with the Cursor AI-first code editor
+* **Claude Code/Desktop**: Works with Anthropic's Claude AI models
+* **Gemini CLI**: Integrates with Google's Gemini AI models via command-line interface
+* **Qoder**: Global-only configuration support
+* **Copilot CLI**: Global-only configuration support
+* **LM Studio**: Global-only configuration support for locally running language models
 
 ## Roadmap
 

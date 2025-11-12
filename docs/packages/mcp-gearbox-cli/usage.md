@@ -19,6 +19,9 @@ mcp init
 # Configure MCP globally for GitHub Copilot AI agent
 mcp init -a copilot
 
+# Configure MCP globally for Copilot CLI
+mcp init -a copilot-cli
+
 # Configure MCP globally for Continue AI
 mcp init -a continue
 
@@ -47,16 +50,24 @@ mcp init -a copilot --servers "git filesystem"
 # Method 2: Multiple option flags
 mcp init -a copilot -s git -s filesystem
 
+# Add specific servers for Copilot CLI with JSON output (compact)
+mcp init -a copilot-cli --servers "git filesystem" --json
+
 # Add specific servers for Continue AI with JSON output (compact)
 mcp init -a continue --servers "git filesystem" --json
 
 # Add specific servers for Continue AI with pretty JSON output
 mcp init -a continue --servers "git filesystem" --json --pretty
 
+# Add specific servers for Copilot CLI with pretty JSON output
+mcp init -a copilot-cli --servers "git filesystem" --json --pretty
+
 # Add servers to current directory project
 mcp init . -a copilot --servers "git filesystem"
+mcp init . -a copilot-cli --servers "git filesystem"
 
 # Add servers to new project directory
+mcp init my-project -a copilot-cli -s git -s filesystem
 mcp init my-project -a continue -s git -s filesystem
 
 # Initialize MCP in current directory
@@ -67,6 +78,9 @@ mcp init my-project
 
 # Initialize MCP for GitHub Copilot AI agent in new project directory
 mcp init my-project -a copilot
+
+# Initialize MCP for Copilot CLI in new project directory
+mcp init my-project -a copilot-cli
 
 # Initialize MCP for Continue AI agent in new project directory
 mcp init my-project -a continue
@@ -96,6 +110,7 @@ mcp list
 
 # List servers for specific agent from global configuration
 mcp list -a copilot
+mcp list -a copilot-cli
 mcp list -a continue
 mcp list -a kiro
 mcp list -a cursor
@@ -112,8 +127,11 @@ mcp list -p my-project
 
 # List servers for specific agent from project
 mcp list -a copilot -p my-project
+mcp list -a copilot-cli -p my-project
 
 # Output in JSON format (useful for scripting and automation)
+mcp list -a copilot-cli --json
+mcp list -a copilot-cli -j
 mcp list -a continue --json
 mcp list -a continue -j
 
@@ -128,9 +146,15 @@ mcp list -s
 # List all available MCP servers with JSON output (pretty printed)
 mcp list --servers --json
 
+# List all available MCP servers with JSON output (pretty printed)
+mcp list --servers --json
+
 # List all available MCP servers with pretty JSON output
 mcp list --servers --json --pretty
 mcp list -s -j --pretty
+
+# List all available MCP servers with pretty JSON output for Copilot CLI
+mcp list --servers --json --pretty -a copilot-cli
 ```
 
 ### mcp rm Examples
@@ -142,12 +166,16 @@ mcp rm
 
 # Interactive removal for specific agent
 mcp rm -a copilot
+mcp rm -a copilot-cli
 
 # Remove specific MCP servers from global configuration
 mcp rm git filesystem
 
 # Remove specific servers for GitHub Copilot AI agent
 mcp rm git filesystem -a copilot
+
+# Remove specific servers for Copilot CLI
+mcp rm git filesystem -a copilot-cli
 
 # Remove specific servers for Continue AI
 mcp rm git filesystem -a continue
@@ -169,6 +197,7 @@ mcp rm --all
 
 # Remove all servers for specific agent
 mcp rm --all -a copilot
+mcp rm --all -a copilot-cli
 
 # Interactive removal from current directory configuration
 mcp rm -p .
@@ -192,20 +221,28 @@ mcp rm git filesystem --force
 mcp rm --all --force
 
 # Output in JSON format (useful for scripting and automation)
+mcp rm git filesystem -a copilot-cli --json
+mcp rm git filesystem -a copilot-cli -j
 mcp rm git filesystem -a continue --json
 mcp rm git filesystem -a continue -j
 
 # Output in pretty JSON format (human-readable)
+mcp rm git filesystem -a copilot-cli --json --pretty
 mcp rm git filesystem -a continue --json --pretty
 
 # Remove all servers with JSON output
+mcp rm --all -a copilot-cli --json
+mcp rm --all -a copilot-cli -j
 mcp rm --all -a continue --json
 mcp rm --all -a continue -j
 
 # Remove all servers with pretty JSON output
+mcp rm --all -a copilot-cli --json --pretty
 mcp rm --all -a continue --json --pretty
 
 # Remove servers from project with JSON output
+mcp rm git filesystem -p my-project -a copilot-cli --json
+mcp rm git filesystem -p my-project -a copilot-cli -j
 mcp rm git filesystem -p my-project -a continue --json
 mcp rm git filesystem -p my-project -a continue -j
 ```
@@ -218,6 +255,7 @@ mcp check
 
 # Check specific agent installation status
 mcp check -a copilot
+mcp check -a copilot-cli
 mcp check -a continue
 mcp check -a kiro
 mcp check -a cursor
@@ -235,10 +273,13 @@ mcp check --json --pretty
 mcp check -j --pretty
 
 # Check specific agent with JSON output
+mcp check -a copilot-cli --json
+mcp check -a copilot-cli -j
 mcp check -a continue --json
 mcp check -a continue -j
 
 # Check specific agent with pretty JSON output
+mcp check -a copilot-cli --json --pretty
 mcp check -a continue --json --pretty
 ```
 

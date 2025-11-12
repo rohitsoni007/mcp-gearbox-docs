@@ -71,6 +71,7 @@ uv sync
 | Claude Code | ✅ |
 | Gemini CLI | ✅ |
 | Qoder | ⚠️ | Qoder does not support project-level MCP configuration |
+| Copilot CLI | ✅ | Copilot CLI does not support project-level MCP configuration |
 | LM Studio | ✅ | LM Studio does not need project-level MCP configuration |
 
 ## 🔧 MCP CLI Reference
@@ -92,7 +93,7 @@ The mcp command supports the following options:
 | --- | --- | --- |
 | `<directory>` | Argument | Directory to initialize MCP configuration (use . for current directory, omit for global configuration) |
 | `--servers, -s` | Option | MCP server names to add directly. Use multiple times (-s git -s filesystem) or space-separated (-s "git filesystem") - optional |
-| `--agent, -a` | Option | AI agent to configure: copilot, continue, kiro, cursor, claude, gemini, qoder, or lmstudio |
+| `--agent, -a` | Option | AI agent to configure: copilot, copilot-cli, continue, kiro, cursor, claude, gemini, qoder, or lmstudio |
 | `--json, -j` | Option | Output in JSON format without banner or UI |
 | `--pretty` | Option | Pretty print JSON output (default: false) |
 
@@ -112,7 +113,7 @@ The mcp command supports the following options:
 | --- | --- | --- |
 | `<servers>` | Argument | MCP server names to remove (e.g., 'git', 'filesystem') - optional |
 | `--all, -A` | Option | Remove all MCP servers |
-| `--agent, -a` | Option | AI agent to configure: copilot, continue, kiro, cursor, claude, gemini, qoder, or lmstudio |
+| `--agent, -a` | Option | AI agent to configure: copilot, copilot-cli, continue, kiro, cursor, claude, gemini, qoder, or lmstudio |
 | `--project, -p` | Option | Project path (use '.' for current directory, omit for global configuration) |
 | `--force, -f` | Option | Skip confirmation prompts |
 | `--json, -j` | Option | Output in JSON format without banner or UI |
@@ -122,7 +123,7 @@ The mcp command supports the following options:
 
 | Argument/Option | Type | Description |
 | --- | --- | --- |
-| `--agent, -a` | Option | Specific agent to check: copilot, continue, kiro, cursor, claude, gemini, qoder, or lmstudio |
+| `--agent, -a` | Option | Specific agent to check: copilot, copilot-cli, continue, kiro, cursor, claude, gemini, qoder, or lmstudio |
 | `--json, -j` | Option | Output in JSON format without banner or UI |
 | `--pretty` | Option | Pretty print JSON output (default: false) |
 

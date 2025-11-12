@@ -74,30 +74,12 @@ const config: Config = {
     colorMode: {
       respectPrefersColorScheme: true,
     },
+    metadata: [
+      {name: 'google-site-verification', content: 'QMpkN_eu_9Xli45PIGkSlaC_xucfSNF-Kp_3sTuRhqU'},
+      {name: 'description', content: 'MCP Gearbox - Simplify Model Context Protocol server management across AI agents like GitHub Copilot, Continue, Kiro, Cursor, Claude, and more.'},
+      {name: 'keywords', content: 'MCP, Model Context Protocol, GitHub Copilot, Continue, Kiro, Cursor, Claude, AI agents, server management, CLI, desktop app'},
+    ],
     headTags: [
-      // Google site verification
-      {
-        tagName: 'meta',
-        attributes: {
-          name: 'google-site-verification',
-          content: 'QMpkN_eu_9Xli45PIGkSlaC_xucfSNF-Kp_3sTuRhqU',
-        },
-      },
-      // SEO meta tags
-      {
-        tagName: 'meta',
-        attributes: {
-          name: 'description',
-          content: 'MCP Gearbox - Simplify Model Context Protocol server management across AI agents like GitHub Copilot, Continue, Kiro, Cursor, Claude, and more.',
-        },
-      },
-      {
-        tagName: 'meta',
-        attributes: {
-          name: 'keywords',
-          content: 'MCP, Model Context Protocol, GitHub Copilot, Continue, Kiro, Cursor, Claude, AI agents, server management, CLI, desktop app',
-        },
-      },
       // Open Graph tags for social sharing
       {
         tagName: 'meta',

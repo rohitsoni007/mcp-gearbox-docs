@@ -1,6 +1,6 @@
-# Website
+# MCP Gearbox Documentation Site
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+This documentation website is for [MCP Gearbox](https://github.com/rohitsoni007/mcp-gearbox), a tool for managing Model Context Protocol servers across AI agents. The site is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
 
 ## Installation
 

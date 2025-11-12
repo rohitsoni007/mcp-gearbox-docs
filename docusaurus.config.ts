@@ -75,11 +75,92 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     headTags: [
+      // Google site verification
       {
         tagName: 'meta',
         attributes: {
           name: 'google-site-verification',
           content: 'QMpkN_eu_9Xli45PIGkSlaC_xucfSNF-Kp_3sTuRhqU',
+        },
+      },
+      // SEO meta tags
+      {
+        tagName: 'meta',
+        attributes: {
+          name: 'description',
+          content: 'MCP Gearbox - Simplify Model Context Protocol server management across AI agents like GitHub Copilot, Continue, Kiro, Cursor, Claude, and more.',
+        },
+      },
+      {
+        tagName: 'meta',
+        attributes: {
+          name: 'keywords',
+          content: 'MCP, Model Context Protocol, GitHub Copilot, Continue, Kiro, Cursor, Claude, AI agents, server management, CLI, desktop app',
+        },
+      },
+      // Open Graph tags for social sharing
+      {
+        tagName: 'meta',
+        attributes: {
+          property: 'og:title',
+          content: 'MCP Gearbox - Model Context Protocol Server Management',
+        },
+      },
+      {
+        tagName: 'meta',
+        attributes: {
+          property: 'og:description',
+          content: 'Simplify Model Context Protocol server management across AI agents',
+        },
+      },
+      {
+        tagName: 'meta',
+        attributes: {
+          property: 'og:type',
+          content: 'website',
+        },
+      },
+      {
+        tagName: 'meta',
+        attributes: {
+          property: 'og:url',
+          content: 'https://rohitsoni007.github.io/mcp-gearbox/',
+        },
+      },
+      {
+        tagName: 'meta',
+        attributes: {
+          property: 'og:image',
+          content: 'https://rohitsoni007.github.io/mcp-gearbox/img/docusaurus-social-card.jpg',
+        },
+      },
+      // Twitter card tags
+      {
+        tagName: 'meta',
+        attributes: {
+          name: 'twitter:card',
+          content: 'summary_large_image',
+        },
+      },
+      {
+        tagName: 'meta',
+        attributes: {
+          name: 'twitter:title',
+          content: 'MCP Gearbox - Model Context Protocol Server Management',
+        },
+      },
+      {
+        tagName: 'meta',
+        attributes: {
+          name: 'twitter:description',
+          content: 'Simplify Model Context Protocol server management across AI agents',
+        },
+      },
+      {
+        tagName: 'meta',
+        attributes: {
+          name: 'twitter:image',
+          content: 'https://rohitsoni007.github.io/mcp-gearbox/img/mcp-gearbox.png',
         },
       },
     ],
